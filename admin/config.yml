@@ -2,13 +2,7 @@ backend:
   name: github
   repo: ae-ci-tbr/aecllcsite
   branch: main
-  base_url: https://aecelectricbr.com
-  auth_endpoint: api/auth
   use_graphql: true
-  commit_messages:
-    create: "Create {{collection}} “{{slug}}”"
-    update: "Update {{collection}} “{{slug}}”"
-    delete: "Delete {{collection}} “{{slug}}”"
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
