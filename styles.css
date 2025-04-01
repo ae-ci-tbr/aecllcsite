@@ -1,107 +1,76 @@
-/* Global Styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #222;
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
 }
 
-/* Container */
-.container {
-    width: 90%;
-    max-width: 960px;
-    margin: auto;
-    padding: 20px;
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #212529;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 /* Header */
 header {
-    background-color: #00264d;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+  text-align: center;
+  padding: 20px 0;
 }
 
 header h1 {
-    margin: 0;
+  font-size: 2.5rem;
+  color: #004085;
+}
+
+header p {
+  font-style: italic;
+  color: #495057;
 }
 
 /* Navigation */
 nav {
-    background-color: #005792;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 10px 0;
+  margin: 20px 0;
+  text-align: center;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  color: #004085;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  color: #0056b3;
+  text-decoration: underline;
 }
 
-/* Main Headings */
+/* Section titles */
 h2 {
-    color: #003366;
-    margin-top: 30px;
+  color: #212529;
+  font-size: 1.75rem;
+  margin: 30px 0 10px;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 5px;
 }
 
-/* List Styling */
+/* Lists */
 ul {
-    margin-top: 10px;
-    margin-left: 20px;
+  list-style-type: disc;
+  margin: 10px 0 30px 20px;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #eee;
-    color: #555;
-    font-size: 0.9em;
-}
-
-/* Form Styling */
-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: inherit;
-}
-
-form button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #005792;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #004170;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.9rem;
 }
