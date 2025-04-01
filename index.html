@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AEC Electric LLC</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AEC Electric LLC</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Redirect from www to root domain -->
+    <script>
+      if (window.location.hostname.startsWith("www.")) {
+        window.location.replace("https://aecelectricbr.com");
+      }
+    </script>
 </head>
 <body>
-  <header>
-    <h1>AEC Electric LLC</h1>
+    <header>
+        <h1>AEC Electric LLC</h1>
+        <p>Professional Residential and Commercial Electrical Services</p>
+    </header>
+
     <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>Reliable Electrical Contracting</h2>
-      <p>Based in Baton Rouge, AEC Electric LLC delivers quality residential, commercial, and industrial electrical services throughout South Louisiana.</p>
-    </section>
+    <main>
+        <section class="intro">
+            <h2>Welcome to AEC Electric</h2>
+            <p>Based in Baton Rouge, we specialize in safe, code-compliant electrical work. From panel upgrades to full home or business rewiring, we provide top-quality, reliable service.</p>
+        </section>
 
-    <section>
-      <h2>Why Choose Us</h2>
-      <ul>
-        <li>Licensed and insured professionals</li>
-        <li>New construction and remodels</li>
-        <li>Panel upgrades and service calls</li>
-        <li>Fast, friendly, and dependable</li>
-      </ul>
-    </section>
-  </main>
+        <section class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Residential and commercial wiring</li>
+                <li>Service panel upgrades</li>
+                <li>Outlet and lighting installation</li>
+                <li>Troubleshooting and repairs</li>
+                <li>Code compliance corrections</li>
+            </ul>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 AEC Electric LLC · Baton Rouge, LA</p>
-  </footer>
+        <section class="why">
+            <h2>Why Choose Us?</h2>
+            <p>We are licensed, insured, and locally owned. Customer safety and satisfaction are our top priorities. We offer clear communication, honest estimates, and quality workmanship.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AEC Electric LLC. All rights reserved.</p>
+    </footer>
 </body>
 </html>
