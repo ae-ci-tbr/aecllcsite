@@ -1,1 +1,35 @@
-# Netlify CMS Config
+backend:
+  name: github
+  repo: ae-ci-tbr/aecllcsite
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"
+        label: "Home Page"
+        name: "home"
+        editor:
+          preview: false
+        fields:
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "projects.html"
+        label: "Projects Page"
+        name: "projects"
+        editor:
+          preview: false
+        fields:
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "contact.html"
+        label: "Contact Page"
+        name: "contact"
+        editor:
+          preview: false
+        fields:
+          - { label: "Body", name: "body", widget: "markdown" }
