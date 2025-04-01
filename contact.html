@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | AEC Electric LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - AEC Electric</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Contact Us</h1>
+    <h1>AEC Electric LLC</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
@@ -18,32 +18,26 @@
 
   <main>
     <section>
-      <h2>Send Us a Message</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+      <h2>Contact Us</h2>
+      <p>Fill out the form below and we’ll get back to you as soon as possible.</p>
+      
+      <form action="https://formspree.io/f/mldjwylj" method="POST">
         <label for="name">Name:</label>
-        <input type="text" name="name" required />
+        <input type="text" id="name" name="name" required />
 
         <label for="email">Email:</label>
-        <input type="email" name="email" required />
+        <input type="email" id="email" name="_replyto" required />
 
         <label for="message">Message:</label>
-        <textarea name="message" rows="5" required></textarea>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
-        <button type="submit">Send</button>
+        <button type="submit">Send Message</button>
       </form>
-    </section>
-
-    <section>
-      <h2>Our Location</h2>
-      <iframe
-        src="https://www.google.com/maps?q=baton+rouge,+la&output=embed"
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-      ></iframe>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 AEC Electric LLC</p>
+    <p>&copy; 2025 AEC Electric LLC. All rights reserved.</p>
   </footer>
 </body>
 </html>
