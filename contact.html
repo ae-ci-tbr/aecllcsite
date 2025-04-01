@@ -3,8 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - AEC Electric</title>
+  <title>Contact Us - AEC Electric LLC</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #fffbea;
+      color: #222;
+    }
+
+    header {
+      background-color: #000;
+      color: #f2c200;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f2c200;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    h1, h2 {
+      color: #000;
+    }
+
+    form {
+      background-color: #f9f9f9;
+      padding: 25px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    button[type="submit"] {
+      background-color: #f2c200;
+      color: #000;
+      padding: 12px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #000;
+      color: #f2c200;
+    }
+
+    footer {
+      background-color: #000;
+      color: #f2c200;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,27 +103,25 @@
   </header>
 
   <main>
-    <section>
-      <h2>Contact Us</h2>
-      <p>Fill out the form below and we’ll get back to you as soon as possible.</p>
-      
-      <form action="https://formspree.io/f/mldjwylj" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+    <h2>Contact Us</h2>
+    <p>Please reach out to us using the form below. We typically respond within one business day.</p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="_replyto" required />
+    <form action="https://formspree.io/f/mldjwylj" method="POST">
+      <label for="name">Name</label><br />
+      <input type="text" id="name" name="name" required /><br />
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+      <label for="email">Email</label><br />
+      <input type="email" id="email" name="email" required /><br />
 
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+      <label for="message">Message</label><br />
+      <textarea id="message" name="message" rows="6" required></textarea><br />
+
+      <button type="submit">Send Message</button>
+    </form>
   </main>
 
   <footer>
-    <p>&copy; 2025 AEC Electric LLC. All rights reserved.</p>
+    &copy; 2025 AEC Electric LLC • Baton Rouge, LA
   </footer>
 </body>
 </html>
