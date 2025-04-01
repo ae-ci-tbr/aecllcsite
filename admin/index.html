@@ -3,8 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <!-- Load Decap CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
+
+    <!-- Link to your config.yml -->
+    <script>
+      window.CMS_MANUAL_INIT = true;
+      window.addEventListener('load', () => {
+        fetch('./config.yml')
+          .then((res) => res.text())
+          .then((config) => {
+            window.CMS.init({ config: YAML.parse(config) });
+          });
+      });
+    </script>
+
+    <!-- Add YAML parser -->
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   </body>
 </html>
