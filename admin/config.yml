@@ -1,29 +1,24 @@
 backend:
-  name: github
-  repo: ae-ci-tbr/aecllcsite
+  name: git-gateway
   branch: main
-  use_graphql: true
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images/uploads"       # Folder inside the repo
+public_folder: "/images/uploads"     # URL used in site
+
+media_library:
+  name: uploadcare
+  config:
+    publicKey: demopublickey         # Optional: remove or replace if not using Uploadcare
+
+site_url: https://aecelectricbr.com
+display_url: https://aecelectricbr.com
 
 collections:
   - name: "pages"
     label: "Pages"
-    files:
-      - label: "Home Page"
-        name: "index"
-        file: "index.html"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "body", widget: "markdown" }
-      - label: "Projects"
-        name: "projects"
-        file: "projects.html"
-        fields:
-          - { label: "Projects", name: "body", widget: "markdown" }
-      - label: "Contact Page"
-        name: "contact"
-        file: "contact.html"
-        fields:
-          - { label: "Form", name: "body", widget: "markdown" }
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
