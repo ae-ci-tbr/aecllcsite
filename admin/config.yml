@@ -6,8 +6,10 @@ backend:
   auth_endpoint: api/auth
   use_graphql: true
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_library:
+  name: file
+  media_folder: "images/uploads"
+  public_folder: "/images/uploads"
 
 collections:
   - name: "pages"
