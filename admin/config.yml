@@ -6,13 +6,8 @@ backend:
   auth_endpoint: /api/auth
   use_graphql: true
 
-media_folder: "images/uploads"         # Required by legacy config schema
-public_folder: "/images/uploads"
-
-media_library:                         # Required by new schema
-  name: file
-  config:
-    multiple: true
+media_folder: "images/uploads"       # where images get saved in the repo
+public_folder: "/images/uploads"     # how the CMS accesses the image URL
 
 collections:
   - name: "pages"
