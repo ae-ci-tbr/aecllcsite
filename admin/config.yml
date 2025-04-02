@@ -33,7 +33,10 @@ collections:
 
   - name: "contact"
     label: "Contact Page"
-    file: "site/contact.md"
-    fields:
-      - { label: "Page Title", name: "title", widget: "string" }
-      - { label: "Content", name: "body", widget: "markdown" }
+    files:
+      - label: "Contact Page"
+        name: "contact"
+        file: "site/contact.md"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
