@@ -1,67 +1,71 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>AEC Electric CMS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #fff;
-        color: #222;
-      }
+<head>
+  <meta charset="utf-8" />
+  <title>AEC Electric CMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      color: #222;
+    }
 
-      header {
-        background: #000;
-        color: #f2c200;
-        padding: 1rem 2rem;
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: bold;
-        border-bottom: 4px solid #f2c200;
-      }
+    header {
+      background: #000;
+      color: #f2c200;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-bottom: 4px solid #f2c200;
+    }
 
-      .top-link {
-        background: #f2c200;
-        color: #000;
-        text-align: center;
-        padding: 0.5rem;
-        font-weight: bold;
-      }
+    .top-link {
+      background: #f2c200;
+      color: #000;
+      text-align: center;
+      padding: 0.5rem;
+      font-weight: bold;
+    }
 
-      .top-link a {
-        color: #000;
-        text-decoration: none;
-      }
+    .top-link a {
+      color: #000;
+      text-decoration: none;
+    }
 
-      .top-link a:hover {
-        text-decoration: underline;
-      }
+    .top-link a:hover {
+      text-decoration: underline;
+    }
 
-      .fallback {
-        padding: 2rem;
-        text-align: center;
-        color: #888;
-        font-size: 1rem;
-      }
-    </style>
+    .fallback {
+      padding: 2rem;
+      text-align: center;
+      color: #888;
+      font-size: 1rem;
+    }
+  </style>
 
-    <!-- Decap CMS Loader -->
-    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
-  </head>
-  <body>
-    <header>
-      AEC Electric CMS
-    </header>
-    <div class="top-link">
-      <a href="https://aecelectricbr.com" target="_blank">← Back to Website</a>
+  <!-- Decap CMS Loader -->
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init();
+  </script>
+</head>
+<body>
+  <header>AEC Electric CMS</header>
+  <div class="top-link">
+    <a href="https://aecelectricbr.com" target="_blank">← Back to Website</a>
+  </div>
+
+  <noscript>
+    <div class="fallback">
+      You need to enable JavaScript to use the content manager.
     </div>
-
-    <noscript>
-      <div class="fallback">
-        You need to enable JavaScript to use the content manager.
-      </div>
-    </noscript>
-  </body>
+  </noscript>
+</body>
 </html>
