@@ -1,19 +1,39 @@
 backend:
   name: github
-  repo: ae-ci-tbr/aecllcsite
-  branch: main
+  repo: ae-ci-tbr/aecllcsite  # Your GitHub repo
+  branch: main                # Or whatever branch you deploy from
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images/uploads"     # Media files will be stored in this folder in the repo
+public_folder: "/images/uploads"   # Media files will be accessible from this public path
 
 media_library:
-  name: uploadcare
+  name: uploadcare                # You can use "uploadcare" or "cloudinary", or leave out for default
+
+site_url: https://aecelectricbr.com
 
 collections:
   - name: "pages"
     label: "Pages"
     folder: "site/pages"
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "site/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+
+  - name: "contact"
+    label: "Contact Page"
+    file: "site/contact.md"
+    fields:
+      - { label: "Page Title", name: "title", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown" }
