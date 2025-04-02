@@ -47,11 +47,23 @@
     }
   </style>
 
-  <!-- Decap CMS Loader -->
+  <!-- Decap CMS Setup -->
   <script>
     window.CMS_MANUAL_INIT = true;
   </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Register default media library
+    CMS.registerMediaLibrary(window.DECAP_CMS_MEDIA_LIBRARY || {
+      name: "default",
+      mediaLibrary: {
+        name: "default",
+        init: () => {},
+      },
+    });
+
+    CMS.init();
+  </script>
 </head>
 <body>
   <header>AEC Electric CMS</header>
@@ -59,20 +71,10 @@
     <a href="https://aecelectricbr.com" target="_blank">← Back to Website</a>
   </div>
 
-  <div id="decap-cms"></div>
-
   <noscript>
     <div class="fallback">
       You need to enable JavaScript to use the content manager.
     </div>
   </noscript>
-
-  <script>
-    fetch('/admin/config.yml')
-      .then(res => res.text())
-      .then(config => {
-        CMS.init({ config });
-      });
-  </script>
 </body>
 </html>
