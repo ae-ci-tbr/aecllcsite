@@ -46,9 +46,6 @@
       font-size: 1rem;
     }
   </style>
-
-  <!-- Decap CMS -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 <body>
   <header>AEC Electric CMS</header>
@@ -56,9 +53,15 @@
     <a href="https://aecelectricbr.com" target="_blank">← Back to Website</a>
   </div>
 
-  <!-- 👇 This is required for Decap CMS to mount -->
+  <!-- ✅ REQUIRED: This is where the CMS UI loads -->
   <div id="nc-root"></div>
 
+  <!-- 🚫 Don't load CMS.js before the div above! -->
+
+  <!-- ✅ CMS Script - after #nc-root div -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <!-- Optional: Fallback message -->
   <noscript>
     <div class="fallback">
       You need to enable JavaScript to use the content manager.
