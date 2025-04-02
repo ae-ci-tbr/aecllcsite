@@ -47,23 +47,8 @@
     }
   </style>
 
-  <!-- Decap CMS Setup -->
-  <script>
-    window.CMS_MANUAL_INIT = true;
-  </script>
+  <!-- Decap CMS Loader (no manual init) -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
-    // Register default media library
-    CMS.registerMediaLibrary(window.DECAP_CMS_MEDIA_LIBRARY || {
-      name: "default",
-      mediaLibrary: {
-        name: "default",
-        init: () => {},
-      },
-    });
-
-    CMS.init();
-  </script>
 </head>
 <body>
   <header>AEC Electric CMS</header>
