@@ -1,24 +1,19 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ae-ci-tbr/aecllcsite
   branch: main
 
-media_folder: "images/uploads"       # Folder inside the repo
-public_folder: "/images/uploads"     # URL used in site
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 media_library:
   name: uploadcare
-  config:
-    publicKey: demopublickey         # Optional: remove or replace if not using Uploadcare
-
-site_url: https://aecelectricbr.com
-display_url: https://aecelectricbr.com
 
 collections:
   - name: "pages"
     label: "Pages"
-    folder: "content/pages"
+    folder: "site/pages"
     create: true
-    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
