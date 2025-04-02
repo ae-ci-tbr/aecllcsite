@@ -6,10 +6,13 @@ backend:
   auth_endpoint: api/auth
   use_graphql: true
 
-media_library:
+media_folder: "images/uploads"         # Required by legacy config schema
+public_folder: "/images/uploads"
+
+media_library:                         # Required by new schema
   name: file
-  media_folder: "images/uploads"
-  public_folder: "/images/uploads"
+  config:
+    multiple: true
 
 collections:
   - name: "pages"
