@@ -1,10 +1,30 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Content Manager</title>
+    <title>Content Manager | AEC Electric</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: #f4f4f4;
+        color: #333;
+      }
+      .fallback {
+        padding: 2rem;
+        text-align: center;
+        color: #888;
+      }
+    </style>
+    <!-- Netlify/Decap CMS Script -->
     <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
   </head>
   <body>
+    <noscript>
+      <div class="fallback">
+        You need to enable JavaScript to use the content manager.
+      </div>
+    </noscript>
   </body>
 </html>
