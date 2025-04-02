@@ -3,7 +3,7 @@ backend:
   repo: ae-ci-tbr/aecllcsite
   branch: main
   base_url: https://aecelectricbr.com
-  auth_endpoint: api/auth
+  auth_endpoint: /api/auth
   use_graphql: true
 
 media_folder: "images/uploads"
