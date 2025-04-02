@@ -1,1 +1,41 @@
-# Netlify CMS Config
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://regal-bombolone-a4fcd0.netlify.app
+
+media_folder: "images/uploads"     # Media files will be stored in this folder in the repo
+public_folder: "/images/uploads"   # Media files will be accessible from this public path
+
+media_library:
+  name: uploadcare                 # Optional: You can remove this line if not using Uploadcare
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "site/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "site/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+
+  - name: "contact"
+    label: "Contact Page"
+    files:
+      - label: "Contact Page"
+        name: "contact"
+        file: "site/contact.md"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
