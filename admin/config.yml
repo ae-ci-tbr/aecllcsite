@@ -3,11 +3,13 @@ backend:
   repo: ae-ci-tbr/aecllcsite
   branch: main
   base_url: https://aecelectricbr.com
-  auth_endpoint: /api/auth
+  auth_endpoint: api/auth
   use_graphql: true
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_library:
+  name: uploadcare
+  config:
+    publicKey: demo  # replace with your actual Uploadcare key or use the default media library
 
 collections:
   - name: "pages"
