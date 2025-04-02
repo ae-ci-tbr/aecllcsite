@@ -6,9 +6,12 @@ backend:
   auth_endpoint: /api/auth
   use_graphql: true
 
-media_folder: "images/uploads"
-media_library: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images/uploads"        # Where images get saved in the repo
+public_folder: "/images/uploads"      # How the CMS accesses the image URL
+media_library:
+  name: "default"
+  media_folder: "images/uploads"
+  public_folder: "/images/uploads"
 
 collections:
   - name: "pages"
