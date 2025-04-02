@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ae-ci-tbr/aecllcsite
   branch: main
+  use_graphql: true
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
@@ -15,13 +17,11 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Content", name: "body", widget: "markdown" }
-
       - label: "Projects"
         name: "projects"
         file: "projects.html"
         fields:
           - { label: "Projects", name: "body", widget: "markdown" }
-
       - label: "Contact Page"
         name: "contact"
         file: "contact.html"
