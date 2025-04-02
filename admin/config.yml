@@ -6,10 +6,8 @@ backend:
   auth_endpoint: api/auth
   use_graphql: true
 
-media_library:
-  name: uploadcare
-  config:
-    publicKey: demo  # replace with your actual Uploadcare key or use the default media library
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "pages"
